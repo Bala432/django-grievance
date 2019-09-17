@@ -1,0 +1,16 @@
+{% extends "super_login_page.html" %}
+
+{% block super %}
+
+    <h1>Fill out the form to Publish this issue to Students</h1>
+    <form method="POST" class="post-form">
+
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button class="btn btn-primary" type="submit">Publish</button>
+
+    </form>
+
+
+{% endblock %}

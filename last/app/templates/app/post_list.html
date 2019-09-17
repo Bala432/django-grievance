@@ -1,0 +1,22 @@
+{% extends 'login_page.html' %}
+{% block content %}
+
+    <h1>Here are the list of Grievances you have addressed !</h1>
+
+    <ol>
+        {% if list %}
+            {% for number in list %}
+
+                 <h2><li><a href="{{number.id}}">{{number.title}}</a></li></h2>
+
+            {% endfor %}
+        {% else %}
+            <h3>No Grievances Registered</h3>
+
+        {% endif %}
+    </ol>
+
+
+
+
+{% endblock %}

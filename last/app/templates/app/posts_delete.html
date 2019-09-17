@@ -1,0 +1,18 @@
+{% extends "login_page.html" %}
+{% block content %}
+
+<h1>Delete {{ post_del.title }}?</h1>
+
+
+<form method="POST" action="">
+
+    {% csrf_token %}
+    <p>Are you sure you want to delete this post?</p>
+    <input type="submit" value="Yes"/>
+    <a href="/post_list/{{ post_del.pk }}/">Cancel </a>
+
+</form>
+
+
+
+{% endblock %}

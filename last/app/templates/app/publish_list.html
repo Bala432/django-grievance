@@ -1,0 +1,15 @@
+{% extends "super_login_page.html" %}
+
+{% block super %}
+
+    <h1>The Following issues are Successfully Addressed</h1>
+    <ol>
+        {% if publish %}
+            {% for p in publish %}
+                <h1><li><a href="{{p.id}}">{{p.problem}}</a></li> </h1>
+            {% endfor %}}
+        {% else %}
+            <h2>No Issues Addressed</h2>
+        {% endif %}
+    </ol>
+{% endblock %}

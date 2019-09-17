@@ -1,0 +1,15 @@
+{% extends "super_login_page.html" %}
+{% block super %}
+    {% if super_post_list %}
+        <h1>Here are the list of obtained Grievances : </h1>
+        <ol>
+            {% for i in super_post_list %}
+                <h1><li><a href="{{i.id}}">{{i.title}}</a></li></h1>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h2>No Grievances are Addressed</h2>
+
+    {% endif %}
+
+{% endblock %}

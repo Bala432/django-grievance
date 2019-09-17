@@ -1,0 +1,16 @@
+{% extends 'login_page.html' %}
+{% block content %}
+
+    <h1>New Post</h1>
+    <form method="post" class="post-form">
+
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">publish</button>
+
+    </form>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,18 @@
+{% extends "login_page.html" %}
+{% block content %}
+
+    <div class="jumbotron">
+
+        <p>Details of the Grievance :</p>
+
+        <p>{{user_post_detail.details}}</p>
+
+    </div>
+
+    <button class="btn btn-success" href="{% url 'up_vote' %}" type="submit">UpVote </button>
+
+    <button class="btn btn-warning" href="{% url 'down_vote' %}" type="submit">DownVote</button>
+
+
+
+{% endblock %}

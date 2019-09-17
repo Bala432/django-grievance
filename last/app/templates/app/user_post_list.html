@@ -1,0 +1,20 @@
+{% extends "login_page.html" %}
+{% block content %}
+
+    {% if user_post_list %}
+        <h1>Here are the Grievances needs to be Voted </h1>
+        <ol>
+            {% for i in user_post_list %}
+
+                <h1><li><a href="{{i.id}}">{{i.problem}}</a> </li></h1>
+
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h2>No Grievances are need to be Voted</h2>
+
+    {% endif %}
+
+
+
+{% endblock %}

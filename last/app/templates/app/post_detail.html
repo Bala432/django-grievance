@@ -1,0 +1,18 @@
+{% extends 'login_page.html' %}
+{% block content %}
+
+    <div class="jumbotron">
+
+        <p>Details of the Grievance are : </p>
+
+        <p>{{post_detail.text}}</p>
+
+    </div>
+
+    <button type="submit" class="btn btn-danger" href="/post_list/{{ post_detail.pk }}/post_delete/">Remove the Post</button>
+
+
+
+
+
+{% endblock %}
